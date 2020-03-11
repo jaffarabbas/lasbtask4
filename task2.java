@@ -1,75 +1,112 @@
 import java.util.Scanner;
 
+
+
+
+/**************************
+
+ Lab Task:
+
+ Task 2:
+
+ Create a CustomerAccount class with attributes CustomerName, TypeOfAccount,
+ AccountNumber, CurrentBalance and methods such as debit(), credit(), withdraw() etc.
+ Apply access modifiers to enhance security so that customer cannot directly change account balance.
+ Use getter and setter methods to view and modify balance according to debit and credit amount. Create
+ multiple objects for customer accounts (atleast three) and store customer information. Call methods from
+ different objects with different information.
+ (Apply validations where required).
+
+ ***************************/
+import java.util.Random;
+
 class CustomerAccount
 {
-       Scanner obj = new Scanner(System.in);
-       public String CustomerName;
-       public String TypeOfAccount;
-       private String AccountNumber;
-       private double CurrentBalance;
+    //Variables
 
-       public void information()
-       {
-           System.out.println("Enter Your Name");
-           CustomerName = obj.next(); 
-           System.out.println("Enter Type of Account: ");
-           TypeOfAccount = obj.next();   
-           set();
-           setBalance();      
-       }
-       void get(String AccountNumber)
-       {
-           this.AccountNumber = AccountNumber;
-       }
-       
-       String set()
-       {
-           System.out.println("Enter Account number :");
-           AccountNumber = obj.next();
-           return AccountNumber;
-       }
+    private String CustomerName;
+    private String TypeOfAccount;
+    private long AccountNumber;
+    private double CurrentBalance;
 
-       void getBalance(double CurrentBalance)
-       {
-           this.CurrentBalance = CurrentBalance;
-       }
-       
-       double setBalance()
-       {
-           System.out.println("Your Curent Balance:");
-           CurrentBalance = 21000;
-           return CurrentBalance;
-       }
+    //constructor
 
-       public void show_result()
-       {
-           System.out.println("\n");
-           System.out.println("Name : "+CustomerName);
-           System.out.println("Account Type : "+TypeOfAccount);
-           System.out.println("Account : "+AccountNumber);
-           System.out.println("Your Balance : "+CurrentBalance);
-       }
+    public CustomerAccount(String CustomerName,String TypeOfAccount,long AccountNumber,double CurrentBalance)
+    {
+        this.CustomerName = CustomerName;
+        this.TypeOfAccount = TypeOfAccount;
+        this.AccountNumber = AccountNumber;
+        this.CurrentBalance = CurrentBalance;
+    }
+    
+    //Methods
+    
+    public double debit(double amount){
+        if(amount > CurrentBalance){
+            amount = amount > 0 ? (amount*-1) : amount;
+            CurrentBalance -= amount;
+            System.out.println("Complete the transaction of account no "+AccountNumber);
+        }
+        else {
+            System.out.println("Error on the amount your CurrentBalance is less then amount you wants to withdraw " + CurrentBalance + " > " + amount);
+        }
+        return CurrentBalance;
+    }
+    public void credit(double amount){
+        if(amount < 0){
+            CurrentBalance += amount;
+            System.out.println("Complete the transaction of account no "+AccountNumber);
+        }
+        else{
+            System.out.println("Error on the amount "+amount+" must be greater than 0");
+        }
+    }
+    public void withdraw(double amount){
+        if(amount < CurrentBalance){
+            amount = amount > 0 ? (amount*-1) : amount;
+            CurrentBalance -= amount;
+            System.out.println("Complete the transaction of account no "+AccountNumber);
+        }
+        else{
+            System.out.println("Error on the amount your CurrentBalance is less then amount you wants to withdraw "+CurrentBalance+" < "+amount);
+        }
+    }
+    public void getDetail(int no){
+      System.out.println("\t\t\tUser No "+no);
+      System.out.println("Customer Name is "+CustomerName);
+      System.out.println("Type Of Account of Mr."+CustomerName+" is "+TypeOfAccount);
+      System.out.println("Account Number of Mr."+CustomerName+" is "+AccountNumber);
+      System.out.println("Current Balance of Account Number is "+AccountNumber+" is "+CurrentBalance+"\n");
+    }
 
-       public void debit()
-       {
-System.out.println("dsf");
-       }
 
-       public void credit()
-       {
-        System.out.println("dsf");
-       }
 
-       private void withdraw()
-       {
-        System.out.println("dsf");
-       }
 }
-class task2
+
+
+public class task2
 {
-    public static void main(String[] args) {
-        CustomerAccount obj = new CustomerAccount();
-        obj.information();
-        obj.show_result();
+    public static void main (String[]args)
+    {
+        Random rng = new Random();
+        long UserAcoountNo_1 = (Long) (rng.nextLong() % 100000000000000L) + 5200000000000000L;
+        long UserAcoountNo_2 = (Long) (rng.nextLong() % 100000000000000L) + 5200000000000000L;
+        long UserAcoountNo_3 = (Long) (rng.nextLong() % 100000000000000L) + 5200000000000000L;
+
+        CustomerAccount User1 = new CustomerAccount("Samin","jjjjj",UserAcoountNo_1,5000);
+        User1.getDetail(1);
+        
+        CustomerAccount User2 = new CustomerAccount("tariq","fff",UserAcoountNo_2,80000);
+        User2.getDetail(2);
+        
+        CustomerAccount User3 = new CustomerAccount("smsss","sdsd",UserAcoountNo_3,500);
+        User3.getDetail(3);
+        
+        int amount = 7000;
+        
+        User1.credit(amount);
+        User2.withdraw(amount);
+        User3.debit(amount);
+        
     }
 }
