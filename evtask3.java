@@ -25,10 +25,18 @@ class DriverExam
             System.out.println("Anwer question  : ");
                 
             attempt[i]=obj.next().charAt(0);
-
+           
+        
+           
             if(attempt[i] != 'A' && attempt[i] !='B' && attempt[i] !='C' && attempt[i] != 'D')
             {   
                 System.out.println("Again!!!!!!!!");
+                continue;
+            }
+
+           else if()
+            {
+                System.out.println("miss");
                 continue;
             }
         
@@ -118,6 +126,21 @@ class DriverExam
         }
         
     }
+
+
+    public void entr()
+    {
+        for(int i = 0 ; i < attempt.length;i++)
+        {
+            System.out.println("Anwer question  : ");
+                
+            attempt[i]=obj.next().charAt(0);
+
+            
+        
+        }
+    }
+
 }
 
 
