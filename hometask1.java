@@ -104,13 +104,7 @@ class TV
     }
 
 
-
-    public void checkstate()
-    {
-        
-    }
-
-
+      
     
 }
 
@@ -118,30 +112,17 @@ class TV
 class hometask1
 {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Press O to open and C to close");
-        char a = scn.next().charAt(0);
-        if(a == 'O')
-        {
-            char b[]={'t','r','u','e'};
-            for(int i:b)
-            {
-                System.out.println(b[i]);
-            }
-        }
-        else if(a=='C'){
-            char b[]={'f','a','l','s','e'};
-            for(int i:b)
-            {
-                System.out.println(b[i]);
-            }
-        }
         int ac=10,b=20;
+        boolean c = true?true:false;
+
+        String str = String.valueOf(c);
+        String o ="String is: "+str;
+
         
         TV obj = new TV(ac,b,c);
    
         
-        obj.checkstate();
+     //   obj.checkstate();
         obj.setchennel();
     }
 }
