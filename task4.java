@@ -45,14 +45,16 @@ class PSL_team
 
 
     public int GetDetail(){
-
+        System.out.print("**************************************\n");
       System.out.println("The name of team is "+TeamName);
-      System.out.println(" The No of Team is "+TeamNo);
-      System.out.println(" PlayerNames is "+PlayerNames);
-      System.out.println("  NoOfMatchesPlayed is "+NoOfMatchesPlayed);
-      System.out.println("   NoOfMatchesWon is "+NoOfMatchesWon);
-      System.out.println("    MatchesLost is "+MatchesLost);
+      System.out.println("The No of Team is "+TeamNo);
+      System.out.println("PlayerNames is "+PlayerNames);
+      System.out.println("NoOfMatchesPlayed is "+NoOfMatchesPlayed);
+      System.out.println("NoOfMatchesWon is "+NoOfMatchesWon);
+      System.out.println("MatchesLost is "+MatchesLost);
+      System.out.print("****************************************");
       return NoOfMatchesWon;
+      
   }
 }
 
@@ -183,9 +185,9 @@ class task4
                         array[j+1] = temp1;
     
                     }
-            System.out.println("\n\n\t\t\tThe Ranking of Teams are");
+            System.out.println("\n\n\t\t\t\t      ***********The Ranking of Teams are***********\n");
             for(i=0; i <=5; i++)
-                System.out.println("The "+(i+1)+" Ranks of the team is "+array[i]+"With Total Win "+arrary[i]);
+                System.out.println("\t\t\t\t"+"The "+(i+1)+" Ranks of the team is "+array[i]+"With Total Win "+arrary[i]);
         }
 
 

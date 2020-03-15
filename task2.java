@@ -2,22 +2,6 @@ import java.util.Scanner;
 
 
 
-
-/**************************
-
- Lab Task:
-
- Task 2:
-
- Create a CustomerAccount class with attributes CustomerName, TypeOfAccount,
- AccountNumber, CurrentBalance and methods such as debit(), credit(), withdraw() etc.
- Apply access modifiers to enhance security so that customer cannot directly change account balance.
- Use getter and setter methods to view and modify balance according to debit and credit amount. Create
- multiple objects for customer accounts (atleast three) and store customer information. Call methods from
- different objects with different information.
- (Apply validations where required).
-
- ***************************/
 import java.util.Random;
 
 class CustomerAccount
@@ -93,13 +77,13 @@ public class task2
         long UserAcoountNo_2 = (Long) (rng.nextLong() % 100000000000000L) + 5200000000000000L;
         long UserAcoountNo_3 = (Long) (rng.nextLong() % 100000000000000L) + 5200000000000000L;
 
-        CustomerAccount User1 = new CustomerAccount("Samin","jjjjj",UserAcoountNo_1,5000);
+        CustomerAccount User1 = new CustomerAccount("jaffar","hello",UserAcoountNo_1,5000);
         User1.getDetail(1);
         
-        CustomerAccount User2 = new CustomerAccount("tariq","fff",UserAcoountNo_2,80000);
+        CustomerAccount User2 = new CustomerAccount("jaxx","man",UserAcoountNo_2,80000);
         User2.getDetail(2);
         
-        CustomerAccount User3 = new CustomerAccount("smsss","sdsd",UserAcoountNo_3,500);
+        CustomerAccount User3 = new CustomerAccount("monmon","can",UserAcoountNo_3,500);
         User3.getDetail(3);
         
         int amount = 7000;
