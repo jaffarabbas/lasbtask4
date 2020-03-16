@@ -102,6 +102,23 @@ class TV
           System.out.println("Your Tv is turn Off: ");
           return this.state;
     }
+
+
+    public void channelUp(){
+    
+        int[] chennel ={1,2,3,4,5,6,7,8,9,10};
+         System.out.println("Channel list : ");
+System.out.println("Enter + for up :");
+char ch = obj.next().charAt(0);
+         for(int a : chennel)
+         {
+             if(ch == '+')
+             {
+                 
+             }
+         }
+}
+
 }
 
 
@@ -109,12 +126,7 @@ class hometask1
 {
     public static void main(String[] args) {
         int ac=10,b=20;
-        boolean c = true?true:false;
-
-        String str = String.valueOf(c);
-        String o ="String is: "+str;
-
-        
+        boolean c = true;
         TV obj = new TV(ac,b,c);
    
         
