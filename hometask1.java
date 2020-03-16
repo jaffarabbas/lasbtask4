@@ -102,10 +102,6 @@ class TV
           System.out.println("Your Tv is turn Off: ");
           return this.state;
     }
-
-
-      
-    
 }
 
 
