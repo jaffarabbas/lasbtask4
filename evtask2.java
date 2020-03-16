@@ -42,7 +42,8 @@ class Cannonball {
 
 class evtask2 {
 	public static void main(String[] args) {
-        Scanner obj = new Scanner(System.in);
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter Velocity : ");
 		double initVelocity = obj.nextDouble();
 		Cannonball c = new Cannonball(initVelocity);
 		c.shoot(initVelocity);

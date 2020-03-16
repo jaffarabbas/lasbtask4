@@ -24,7 +24,7 @@ class DriverExam
         {
             System.out.println("Anwer question  : ");
                 
-            attempt[i]=obj.next().charAt(0);
+            attempt[i]=Character.toUpperCase(obj.next().charAt(0));
            
         
            
@@ -33,13 +33,6 @@ class DriverExam
                 System.out.println("Again!!!!!!!!");
                 continue;
             }
-
-           else if()
-            {
-                System.out.println("miss");
-                continue;
-            }
-        
         }
 
 
