@@ -1,15 +1,4 @@
-/**************************
 
- Lab Task:
-
- Task 3:
-
- Task 2 is a sequential process for all customers with fixed debit and credit value. Enhance the application by
- using control statement to take input of account number and make user choose function to perform(debit,
- credit, withdraw).(Inputs: Acc No, Action to perform, Amount to perform action).
-
-
- ***************************/
 import java.util.Random;
 import java.util.Scanner;
 
@@ -87,13 +76,13 @@ public class task3
         long UserAcoountNo_2 = (Long) (rng.nextLong() % 100000000000000L) + 5200000000000000L;
         long UserAcoountNo_3 = (Long) (rng.nextLong() % 100000000000000L) + 5200000000000000L;
 
-        CustomerAccount User1 = new CustomerAccount("samin","Assiats",UserAcoountNo_1,5000);
+        CustomerAccount User1 = new CustomerAccount("jaffar","Assiats",UserAcoountNo_1,5000);
         User1.getDetail(1);
 
-        CustomerAccount User2 = new CustomerAccount("marium","Capital",UserAcoountNo_2,80000);
+        CustomerAccount User2 = new CustomerAccount("fahad","Capital",UserAcoountNo_2,80000);
         User2.getDetail(2);
 
-        CustomerAccount User3 = new CustomerAccount("zehera","Capital",UserAcoountNo_3,500);
+        CustomerAccount User3 = new CustomerAccount("ahmed","Capital",UserAcoountNo_3,500);
         User3.getDetail(3);
 
         Scanner scan = new Scanner(System.in);
