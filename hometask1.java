@@ -104,20 +104,49 @@ class TV
     }
 
 
-    public void channelUp(){
+    public void channelUp_down(){
     
         int[] chennel ={1,2,3,4,5,6,7,8,9,10};
-         System.out.println("Channel list : ");
-System.out.println("Enter + for up :");
-char ch = obj.next().charAt(0);
-         for(int a : chennel)
+        int []temp = new int[10];
+        System.out.println("Channel list : ");
+        System.out.println("Enter + for up :");
+
+         for(int a =0;a<10;a++)
          {
+            for(int i =0;i<10;i++)
+            {
+             char ch = obj.next().charAt(0);
              if(ch == '+')
              {
-                 
+                 temp[i] = chennel[a];
+                 System.out.println("Channel : "+temp[i]);
+                 break;
+             }
+             else if(ch == '-')
+             {
+                     
+                     if(temp[i] >= 2)
+                     {
+                     temp[i]--;
+                     System.out.println("Channel : "+temp[i]);
+                     break;
+                     }else{
+                         System.out.println("Channel are over");
+                     break;
+                     }
              }
          }
+         }
 }
+
+
+
+    public void volume()
+    {
+        int vol;
+
+       
+    }
 
 }
 
@@ -131,6 +160,11 @@ class hometask1
    
         
      //   obj.checkstate();
-        obj.setchennel();
+       // obj.setchennel();
+
+       //obj.channelUp();
+
+
+       obj.volume();
     }
 }
