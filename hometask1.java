@@ -136,35 +136,59 @@ class TV
                      }
              }
          }
-         }
-}
-
-
-
-    public void volume()
-    {
-        int vol;
-
-       
     }
-
 }
 
+
+
+     public void volumeUp_Down()
+     {
+         do {
+                     char a=obj.next().charAt(0);
+                     if(a == '+'){             
+                     this.volume +=10;
+                     System.out.println("Volume : "+this.volume);          
+                     }
+                     else if(a == '-')
+                     {
+                         this.volume-=10;
+                         System.out.println("Volume : "+this.volume); 
+                     }
+            
+         }while (this.volume >=10 && this.volume<100);
+     }
+ }
 
 class hometask1
 {
     public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
         int ac=10,b=20;
         boolean c = true;
         TV obj = new TV(ac,b,c);
    
+        System.out.println("Enter mood what you want :  \n(C for check chennel list)\n(S Set Chennel)\n(U for Chennel Scrolling + for up and - for down)\n(V for Volume scroll + for up and - for down)");
         
-     //   obj.checkstate();
-       // obj.setchennel();
+        char a = Character.toUpperCase(scn.next().charAt(0));
 
-       //obj.channelUp();
-
-
-       obj.volume();
+        switch (a) {
+            case 'C':
+            obj.channel();
+                break;
+            case 'S':
+            obj.setchennel();
+                break;
+            case 'U':
+            obj.channelUp_down();
+                break;
+            case 'V':
+            obj.volumeUp_Down();
+                break;
+            default:
+            System.out.println("enter again :   ");
+            a = Character.toUpperCase(scn.next().charAt(0));
+                break;
+        }
+        scn.close();
     }
 }
