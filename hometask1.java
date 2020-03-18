@@ -49,8 +49,6 @@ class TV
            System.out.println("Chennel no : "+this.channel+"\nvolume : "+this.volume+"\nstate : "+this.state);
     }
 
-
-
    // public int[] chennel ={1,2,3,4,5,6,7,8,9,10};
     public void channel()
     {
@@ -87,7 +85,6 @@ class TV
             System.out.println("Seted channel :  "+chennel[i]+" at position : "+(i+1));
         } 
     }
-
 
    public boolean turnon()
     {
